@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "lace closure wig",
+        "price": 89.99,
+        "image": { "fields": { "file": { "url": "./images/lace closure same day shipping.jpeg"} } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "curly wig",
+        "price": 79.99,
+        "image": { "fields": { "file": { "url": "./images/black friday human hair lace wig.jpeg "} } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "air bang long wig",
+        "price": 109.99,
+        "image": { "fields": { "file": { "url": "./images/black Air Bang Long Wig SP1711587.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "ombre wave wig",
+        "price": 129.99,
+        "image": { "fields": { "file": { "url": "./images/ulovewigs Human Virgin Hair Ombre Wave Pre Plucked Transparent Lace Front Wig  Free Shipping (ULW0035).jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "mid part wig",
+        "price": 99.99,
+        "image": { "fields": { "file": { "url": "./images/sims on Instagram.jpeg "} } }
+      }
+    }
+    
+    
+    
+    
+  ]
+}
