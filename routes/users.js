@@ -81,7 +81,7 @@ if (errors.length > 0) {
 //Login Handle
 router.post('/login',(req,res,next)=>{
     passport.authenticate('local',{
-        successRedirect:'/dashboard',
+        successRedirect:'http://localhost:5000/loggedin.html',
         failureRedirect:'/users/login',
         failureFlash: true
     })(req,res,next);
@@ -92,6 +92,7 @@ router.get('/logout',(req,res)=>{
     req.logout();
     req.flash('success_msg','You are logged out');
     res.redirect('/users/login');
+    return;
 })
 
 module.exports = router;
