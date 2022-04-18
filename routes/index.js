@@ -5,9 +5,10 @@ const {ensureAuthenticated} = require('../config/auth');
 //Welcome page
 router.get('/',  (req, res) => res.render('welcome'));
 //Dahsboard
-router.get('./index.html', ensureAuthenticated, (req, res) => 
-res.render('index.html',{
+router.get('/loggedin', ensureAuthenticated, (req, res) => 
+res.render('loggedin',{
     name: req.user.name
+    
 }));
 
 
