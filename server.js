@@ -1,3 +1,10 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+const stripePublicKey = process.env.STRIPE_PUBLIC_KEY;
+
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
@@ -5,12 +12,28 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const path = require('path');
+const fs = require('fs');
+const stripe = require('stripe')(stripeSecretKey);
 
 const app = express();
+app.use(express.json());
+
+
+
+const storeItems = new Map([])
+
+
+
+
 
 
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static('public'))
+app.use(express.static('frontend'))
+
+
+
 
 //Passport config
 require('./config/passport')(passport);
@@ -26,6 +49,7 @@ mongoose.connect(db,{ useNewUrlParser:true})
 //EJS
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
+
 
 //Bodyparser
 app.use(express.urlencoded({extended: false}));
