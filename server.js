@@ -26,7 +26,8 @@ app.set('view engine', 'ejs');
 
 app.use(express.json());
 
-
+// Do not use the common layout template for the store page
+app.set("layout store", false);
 
 
 //Passport config
@@ -72,7 +73,8 @@ app.get('/store', function(req, res) {
     } else {
       res.render('store.ejs', {
         stripePublicKey: stripePublicKey,
-        items: JSON.parse(data)
+        items: JSON.parse(data),
+        layout: 'store'
       })
     }
   })
