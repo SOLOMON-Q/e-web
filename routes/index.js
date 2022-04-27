@@ -7,8 +7,7 @@ router.get('/',  (req, res) => res.render('welcome'));
 //Dahsboard
 router.get('/loggedin', ensureAuthenticated, (req, res) => 
 res.render('loggedin',{
-    name: req.user.name
-    
+    name: req.user.name 
 }));
 
 
